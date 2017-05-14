@@ -14,6 +14,8 @@ class CalendarEvent:
         return {'eventTitle': self.eventTitle, 'eventDescription': self.eventDescription, 'eventTime': self.eventTime}
 
 
+    def test(self):
+        pass
 
 #cal = CalendarEvent()
 
