@@ -5,20 +5,12 @@ class CalendarEvent:
         self.eventTitle = None
         self.eventDescription = None
         self.eventTime = None
+        self.eventDate = None
 
-    def createEvent(self, eventTitle, eventDescription, eventTime):
+    def createEvent(self, eventTitle, eventDescription, eventDate, eventTime):
         self.eventTitle = eventTitle
         self.eventDescription = eventDescription
+        self.eventDate = eventDate
         self.eventTime = eventTime
 
-        return {'eventTitle': self.eventTitle, 'eventDescription': self.eventDescription, 'eventTime': self.eventTime}
-
-
-    def test(self):
-        pass
-
-#cal = CalendarEvent()
-
-
-#for k, v in cal.createEvent("Test", "Testing", "23:00").items():
-    #print(v)
+        return {'eventTitle': self.eventTitle, 'eventDescription': self.eventDescription, 'eventTime': self.eventTime, 'seventDate': self.eventDate}
