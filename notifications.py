@@ -4,9 +4,9 @@ import sys
 
 class notifications:
 
-    def buildNotification(self, kwargs):
-        eventTitle = kwargs['eventTitle']
-        eventDescription = kwargs['eventDescription']
+    def buildNotification(self, data):
+        eventTitle = data['eventTitle']
+        eventDescription = data['eventDescription']
 
         app = Qt.QApplication(sys.argv)
         systemtray_icon = Qt.QSystemTrayIcon(Qt.QIcon("df"))
