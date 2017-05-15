@@ -13,4 +13,7 @@ class CalendarEvent:
         self.eventDate = eventDate
         self.eventTime = eventTime
 
-        return {'eventTitle': self.eventTitle, 'eventDescription': self.eventDescription, 'eventTime': self.eventTime, 'seventDate': self.eventDate}
+        return {'eventTitle': self.eventTitle, 'eventDescription': self.eventDescription, 'eventTime': self.eventTime, 'eventDate': self.eventDate}
+
+
+
