@@ -4,7 +4,7 @@ import sys
 
 class notifications:
 
-    def buildNotification(self, data):
+    def spawn_notification(self, data):
         eventTitle = data['eventTitle']
         eventDescription = data['eventDescription']
 

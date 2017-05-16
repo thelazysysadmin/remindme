@@ -1,14 +1,24 @@
 from datetime import datetime
 from CalanderEvent import CalendarEvent
 from notifications import notifications
-from apscheduler.schedulers.blocking import BlockingScheduler
 
-
-sched = BlockingScheduler()
 
 nots = notifications()
 events = CalendarEvent()
 
-data = events.createEvent("Test Event!", "PHONE MUM!!", "TestDate", "TestTime")
+data = events.createEvent("Test Event!", "PHONE MUM!!", "2017-05-16", "TestTime")
 
-nots.buildNotification(data)
+
+def schedule_event(data):
+    current_date = datetime.now().strftime("%Y-%m-%d")
+    event_date = data['eventDate']
+    if current_date == event_date:
+        return nots.spawn_notification(data)
+
+
+
+
+schedule_event(data)
+
+
+
